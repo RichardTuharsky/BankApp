@@ -9,7 +9,7 @@ public class Balance {
     private int balance_customer_id;
     private String balance_description;
 
-    void addBalance() {
+    void depositMoney() {
         long amount = 0;
         System.out.println("Enter amount you want to add: ");
         amount = sc.nextLong();
@@ -17,11 +17,11 @@ public class Balance {
         System.out.println("Current balance after deposit: " +balance_amount);
     }
 
-    void editBalance() {
+    void withdraw() {
         while(balance_id) {
             long amount = 0;
             while (balance_amount > 0) {
-                System.out.println("Enter the amount you want to withdraw: "); //? nefunguje, neviem preco zatial
+                System.out.println("Enter the amount you want to withdraw: ");
                 amount = sc.nextLong(); //??
                 balance_amount -= amount;
                 System.out.println("Your current balance is: " + balance_amount);
@@ -29,11 +29,7 @@ public class Balance {
         }
     }
 
-    void deleteBalance() {
-        //TODO
-    }
-
-    void searchBalance() {
+    public double checkBalance() {
         //TODO
     }
 }
